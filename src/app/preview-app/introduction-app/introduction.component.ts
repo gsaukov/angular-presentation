@@ -1,16 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterContentChecked, AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'introduction-app',
   templateUrl: './introduction.component.html',
   styleUrls: ['./introduction.component.scss']
 })
-export class IntroductionComponent implements OnInit {
+export class IntroductionComponent implements AfterViewInit{
 
-  constructor() { }
+  code:any
+  constructor() {
+  }
 
-  ngOnInit(): void {
-    console.log('ProjectGenerationTaskAppComponent')
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.code = document.documentElement.innerHTML
+    });
   }
 
 }
+

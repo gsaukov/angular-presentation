@@ -2,16 +2,21 @@ mat-card span, ol {
   color: azure;
   font-size: 1.5em;
   line-height: 2rem;
-  letter-spacing: 2px;
   font-weight: 200;
 }
 
 mat-card-content {
   max-width: 80%;
-  min-height: 40em;
+  min-height: 30em;
 }
 
 mat-card-content, mat-card-title {
   margin-left: 3em;
   display: inline-block;
+}
+
+code {
+  background-color: #151414;
+  padding: 5px;
+  border-radius: 4px;
 }
