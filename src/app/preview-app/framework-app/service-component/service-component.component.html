@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-content>
+    <h1> Service. </h1>
+    <div class="grid-container">
+      <div class="grid-item item1">
+        <span> Service is a service like anywhere else! </span>
+        <br/>
+        <span>Services play a crucial role in providing a way to encapsulate and share logic, data, and functionality across different parts of your application.</span>
+        <br/><br/>
+        <div class="place-query-container">
+          <form class="place-query-form" [formGroup]="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+            <div class="form-element" >
+              <input #placeQuery type="text" class="place-query-control" formControlName="placeQuery" placeholder="Place name" autocomplete="off" [required]="false" />
+            </div>
+          </form>
+          <app-place-query-results [dataSource]="nominatimResult" ></app-place-query-results>
+        </div>
+      </div>
+      <div class="grid-item item2">
+        <app-editor [code]="code"></app-editor>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+

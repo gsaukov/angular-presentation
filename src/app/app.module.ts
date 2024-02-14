@@ -23,6 +23,11 @@ import { ComponentComponentComponent } from "./preview-app/framework-app/compone
 import { FrameworkAppComponent } from "./preview-app/framework-app/framework-app.component";
 import { IgxButtonModule, IgxCarouselModule, IgxIconModule, IgxInputGroupModule, IgxListModule, } from "igniteui-angular";
 import {EditorComponent} from "./preview-app/editor/editor.component";
+import {ServiceComponentComponent} from "./preview-app/framework-app/service-component/service-component.component";
+import {
+  PlaceQueryResultsComponent
+} from "./preview-app/framework-app/service-component/place-query-results/place-query-results.component";
+
 
 //I keep the new line
 @NgModule({
@@ -37,7 +42,9 @@ import {EditorComponent} from "./preview-app/editor/editor.component";
     IntroductionComponent,
     FrameworkAppComponent,
     CliComponentComponent,
-    ComponentComponentComponent
+    ComponentComponentComponent,
+    ServiceComponentComponent,
+    PlaceQueryResultsComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +61,7 @@ import {EditorComponent} from "./preview-app/editor/editor.component";
     IgxInputGroupModule,
     IgxIconModule,
     IgxButtonModule,
-    EditorComponent
+    EditorComponent,
   ],
   providers: [
     DatePipe,
@@ -65,6 +72,9 @@ import {EditorComponent} from "./preview-app/editor/editor.component";
     },
   ],
   bootstrap: [AppComponent],
+  exports: [
+    PlaceQueryResultsComponent
+  ]
 })
 export class AppModule {
 }

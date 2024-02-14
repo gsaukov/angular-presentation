@@ -1,0 +1,16 @@
+.no-place-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.5em;
+}
+
+.table-container {
+  max-height: 15rem;
+  overflow-x: scroll;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  background-color: rgba(255, 255, 255, .50);
+  cursor: pointer;
+}
