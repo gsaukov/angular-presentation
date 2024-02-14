@@ -6,3 +6,40 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+mat-card {
+  height: 36em;
+  color: azure;
+  font-size: 1.5em;
+  line-height: 2rem;
+  font-weight: 200;
+}
+
+mat-card-content {
+  max-width: 90%;
+  min-height: 25em;
+}
+
+mat-card-content, mat-card-title {
+  margin-left: 2em;
+  display: inline-block;
+}
+
+.grid-container {
+  display: flex;
+  width: 100%;
+}
+
+.grid-item {
+  padding: 10px;
+}
+
+.item1 {
+  flex: 0 0 34%; /* 66% of the available space */
+}
+
+.item2 {
+  flex: 0 0 66%; /* 34% of the available space */
+}
+

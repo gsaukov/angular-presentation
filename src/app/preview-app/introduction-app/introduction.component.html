@@ -1,13 +1,19 @@
 <mat-card>
     <mat-card-content>
-      <h1>1. Introduction. </h1>
-      <span> Welcome to Angular Knowledge sharing! </span>
-      <ol>
-        <li> DOM </li>
-        <li> CSS </li>
-        <li> Java Script</li>
-      </ol>
-      <br/>
-      <app-editor [code]="code"></app-editor>
+      <h1> Introduction. </h1>
+      <div class="grid-container">
+        <div class="grid-item item1">
+          <span> Welcome to Angular Knowledge sharing! </span>
+          <ol>
+            <li> DOM </li>
+            <li> CSS </li>
+            <li> Java Script</li>
+          </ol>
+          <br/>
+        </div>
+        <div class="grid-item item2">
+          <app-editor [code]="code"></app-editor>
+        </div>
+      </div>
     </mat-card-content>
 </mat-card>

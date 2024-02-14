@@ -6,18 +6,4 @@ import { Component } from '@angular/core';
   styleUrl: './cli-component.component.scss'
 })
 export class CliComponentComponent {
-  code = '@Component({\n' +
-    '  selector: \'app-framework-app\',\n' +
-    '  templateUrl: \'./framework-app.component.html\',\n' +
-    '  styleUrl: \'./framework-app.component.scss\'\n' +
-    '})\n' +
-    'export class FrameworkAppComponent {\n' +
-    '\n' +
-    '  constructor() { }\n' +
-    '\n' +
-    '  ngOnInit(): void {\n' +
-    '\n' +
-    '  }\n' +
-    '\n' +
-    '}'
 }
