@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-content>
+    <h1> Directives. </h1>
+    <div class="grid-container">
+      <div class="grid-item item1">
+        <span> Directives manage HTML! </span>
+        <ol>
+          <li><strong>Component:</strong></li>
+          <p>Components themselves</p>
+          <li><strong>Attribute:</strong></li>
+          <p>HTML attribute modifiers. ngClass, ngStyle</p>
+          <li><strong>Structural:</strong></li>
+          <p>Structural directives change the DOM layout by adding or removing DOM elements. They are key players in changing view view. Examples include ngIf, ngFor, and ngSwitch.</p>
+        </ol>
+        <br/>
+      </div>
+      <div class="grid-item item2">
+        <app-editor [code]="code"></app-editor>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+

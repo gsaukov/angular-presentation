@@ -1,11 +1,12 @@
-import {AfterContentChecked, AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
+import { html_beautify } from 'js-beautify'
 
 @Component({
   selector: 'introduction-app',
   templateUrl: './introduction.component.html',
   styleUrls: ['./introduction.component.scss']
 })
-export class IntroductionComponent implements AfterViewInit{
+export class IntroductionComponent implements AfterViewInit {
 
   code:any
   constructor() {
@@ -13,7 +14,7 @@ export class IntroductionComponent implements AfterViewInit{
 
   ngAfterViewInit(): void {
     setTimeout(() => {
-      this.code = document.documentElement.innerHTML
+      this.code = html_beautify(document.documentElement.innerHTML)
     });
   }
 

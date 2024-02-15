@@ -10,7 +10,6 @@ export class PreviewAppComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('TasksAppComponent')
   }
 
 }

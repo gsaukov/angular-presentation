@@ -6,9 +6,7 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
   styleUrls: ['./site-layout.component.scss']
 })
 export class SiteLayoutComponent implements OnInit {
-  title = 'ctm-client';
   ngOnInit() {
-    console.log('SiteLayoutComponent')
   }
   constructor() { }
 

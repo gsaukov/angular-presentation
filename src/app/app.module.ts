@@ -27,6 +27,11 @@ import {ServiceComponentComponent} from "./preview-app/framework-app/service-com
 import {
   PlaceQueryResultsComponent
 } from "./preview-app/framework-app/service-component/place-query-results/place-query-results.component";
+import {
+  DirectiveComponentComponent
+} from "./preview-app/framework-app/directive-component/directive-component.component";
+import {RouterComponentComponent} from "./preview-app/framework-app/router-component/router-component.component";
+import { DependenciesAppComponent } from './preview-app/dependencies-app/dependencies-app.component';
 
 
 //I keep the new line
@@ -45,6 +50,9 @@ import {
     ComponentComponentComponent,
     ServiceComponentComponent,
     PlaceQueryResultsComponent,
+    DirectiveComponentComponent,
+    RouterComponentComponent,
+    DependenciesAppComponent
   ],
   imports: [
     BrowserModule,
