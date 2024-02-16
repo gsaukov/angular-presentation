@@ -7,6 +7,10 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+h1, strong {
+  color: aqua;
+}
+
 
 mat-card {
   height: 36em;
