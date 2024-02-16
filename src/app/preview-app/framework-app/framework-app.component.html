@@ -1,5 +1,5 @@
 <div class="carousel-container">
-  <igx-carousel>
+  <igx-carousel [maximumIndicatorsCount]="8">
     <igx-slide>
       <div class="slide-content-wrapper">
         <app-cli-component></app-cli-component>
@@ -23,6 +23,11 @@
     <igx-slide>
       <div class="slide-content-wrapper">
         <app-router-component></app-router-component>
+      </div>
+    </igx-slide>
+    <igx-slide>
+      <div class="slide-content-wrapper">
+        <app-pipe-component></app-pipe-component>
       </div>
     </igx-slide>
   </igx-carousel>
