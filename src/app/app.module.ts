@@ -33,6 +33,7 @@ import {
 import {RouterComponentComponent} from "./preview-app/framework-app/router-component/router-component.component";
 import { DependenciesAppComponent } from './preview-app/dependencies-app/dependencies-app.component';
 import {PipeComponentComponent} from "./preview-app/framework-app/pipe-component/pipe-component.component";
+import {DataSharingAppComponent} from "./preview-app/data-sharing-app/data-sharing-app.component";
 
 
 //I keep the new line
@@ -54,7 +55,8 @@ import {PipeComponentComponent} from "./preview-app/framework-app/pipe-component
     DirectiveComponentComponent,
     RouterComponentComponent,
     DependenciesAppComponent,
-    PipeComponentComponent
+    PipeComponentComponent,
+    DataSharingAppComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-content>
+    <h1> Share data between components </h1>
+    <span> Components are communicating with each other! </span>
+    <ol>
+      <li><strong>Input and Output decorators.</strong></li>
+      <p>Allows Parents inject Data or Callback into child via &commat;Input and await &commat;Output from child's component Event emitter.</p>
+      <li><strong>ViewChild.</strong></li>
+      <p>Full access to a child component for direct management. Cannot access siblings and dependant on child initialization and state.</p>
+      <li><strong>Shared state service or Event emitter service.</strong></li>
+      <p>Shared state service is a pattern where you create a service to hold the shared state or data that needs to be accessed or modified by multiple components across your application.<br>
+        Event emitter services are useful for scenarios where one component needs to notify other components about certain actions or changes.</p>
+      <li><strong>BehaviorSubject feature from RxJS.</strong></li>
+      <p>Data broadcast to subscribers.</p>
+    </ol>
+    <br/>
+    <span>All of these patterns are commonly used in Angular applications to promote modularity, encapsulation, and maintainability by facilitating communication and data sharing between components in a structured way. </span>
+  </mat-card-content>
+</mat-card>

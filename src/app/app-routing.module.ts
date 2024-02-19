@@ -6,6 +6,7 @@ import {PageNotFoundComponent} from "./navigation/page-not-found/page-not-found.
 import {HistoryAppComponent} from "./preview-app/history-app/history-app.component";
 import {FrameworkAppComponent} from "./preview-app/framework-app/framework-app.component";
 import {DependenciesAppComponent} from "./preview-app/dependencies-app/dependencies-app.component";
+import {DataSharingAppComponent} from "./preview-app/data-sharing-app/data-sharing-app.component";
 
 // ROUTES
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
     { path: 'history', component: HistoryAppComponent},
     { path: 'framework', component: FrameworkAppComponent},
     { path: 'dependencies', component: DependenciesAppComponent},
+    { path: 'data-sharing', component: DataSharingAppComponent},
   ]},
   {path: '**', component: PageNotFoundComponent}
 ];
