@@ -8,6 +8,7 @@ import {FrameworkAppComponent} from "./preview-app/framework-app/framework-app.c
 import {DependenciesAppComponent} from "./preview-app/dependencies-app/dependencies-app.component";
 import {DataSharingAppComponent} from "./preview-app/data-sharing-app/data-sharing-app.component";
 import {TestingAppComponent} from "./preview-app/testing-app/testing-app.component";
+import {ConclusionAppComponent} from "./preview-app/conclusion-app/conclusion-app.component";
 
 // ROUTES
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
     { path: 'dependencies', component: DependenciesAppComponent},
     { path: 'data-sharing', component: DataSharingAppComponent},
     { path: 'testing', component: TestingAppComponent},
+    { path: 'conclusion', component: ConclusionAppComponent},
   ]},
   {path: '**', component: PageNotFoundComponent}
 ];

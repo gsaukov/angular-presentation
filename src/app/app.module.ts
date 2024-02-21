@@ -34,6 +34,8 @@ import { DependenciesAppComponent } from './preview-app/dependencies-app/depende
 import {PipeComponentComponent} from "./preview-app/framework-app/pipe-component/pipe-component.component";
 import {DataSharingAppComponent} from "./preview-app/data-sharing-app/data-sharing-app.component";
 import {TestingAppComponent} from "./preview-app/testing-app/testing-app.component";
+import {ConclusionAppComponent} from "./preview-app/conclusion-app/conclusion-app.component";
+import {MutationObserverService} from "./services/mutation-observer.service";
 
 
 const monacoConfig: NgxMonacoEditorConfig = {
@@ -69,7 +71,8 @@ function onMonacoLoad() {
     DependenciesAppComponent,
     PipeComponentComponent,
     DataSharingAppComponent,
-    TestingAppComponent
+    TestingAppComponent,
+    ConclusionAppComponent
   ],
   imports: [
     BrowserModule,
@@ -102,4 +105,7 @@ function onMonacoLoad() {
   ]
 })
 export class AppModule {
+  constructor(private mutationObserverService: MutationObserverService) { //eager service initialization otherwise lazy on component load
+  }
+
 }
