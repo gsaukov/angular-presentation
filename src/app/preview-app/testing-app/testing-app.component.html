@@ -1,1 +1,20 @@
-<p>testing-app works!</p>
+<mat-card>
+  <mat-card-content>
+    <h1> Testing. </h1>
+    <div class="grid-container">
+      <div class="grid-item item1">
+        <span> Welcome to Angular Knowledge sharing! </span>
+        <ol>
+          <li> Karma and Jest! </li>
+          <li> CSS </li>
+          <li> Java Script</li>
+        </ol>
+        <br/>
+      </div>
+      <div class="grid-item item2">
+        <app-editor #editor [code]="code" [language]="'typescript'"></app-editor>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
