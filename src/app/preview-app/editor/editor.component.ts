@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {MonacoEditorModule} from "ngx-monaco-editor-v2";
 import {FormsModule} from "@angular/forms";
 
@@ -9,24 +9,24 @@ import {FormsModule} from "@angular/forms";
   templateUrl: './editor.component.html',
   styleUrl: './editor.component.scss'
 })
-export class EditorComponent implements AfterViewInit{
-  @ViewChild(ElementRef, { static: true }) editorComponent!: ElementRef;
-  editorOptions = {theme: 'vs-dark', language: 'html'}
-  @Input({ required: true }) code!: string
+export class EditorComponent implements OnInit {
+  @ViewChild('editorComponent', {static: true}) editorComponent!: ElementRef;
+  @Input({required: true}) code!: string
+  @Input({required: false}) language!: string
+  editorOptions = {}
+
 
   constructor() {
 
   }
 
-  onInit(editor:any): void {
-    editor!.getAction('editor.action.formatDocument')!.run();
-  }
-
-  formatCode() {
-    // this.editorInstance!.getAction('editor.action.formatDocument')!.run();
-  }
-
-  ngAfterViewInit(): void {
+  ngOnInit() {
+    this.editorOptions = {
+      noSemanticValidation: true,
+      noSyntaxValidation: true,
+      theme: 'vs-dark',
+      language: this.language ? this.language : 'html'
+    }
   }
 
 }

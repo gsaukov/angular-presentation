@@ -15,9 +15,8 @@ import { DatePipe } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HeaderInterceptor } from "./header-interceptor";
 import { RouterOutlet } from "@angular/router";
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { IntroductionComponent } from "./preview-app/introduction-app/introduction.component";
-import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
+import {MonacoEditorModule, NgxMonacoEditorConfig} from 'ngx-monaco-editor-v2';
 import { CliComponentComponent } from "./preview-app/framework-app/cli-component/cli-component.component";
 import { ComponentComponentComponent } from "./preview-app/framework-app/component-component/component-component.component";
 import { FrameworkAppComponent } from "./preview-app/framework-app/framework-app.component";
@@ -37,7 +36,19 @@ import {DataSharingAppComponent} from "./preview-app/data-sharing-app/data-shari
 import {TestingAppComponent} from "./preview-app/testing-app/testing-app.component";
 
 
-//I keep the new line
+const monacoConfig: NgxMonacoEditorConfig = {
+  baseUrl: 'assets',
+  defaultOptions: { scrollBeyondLastLine: false },
+  onMonacoLoad
+};
+
+function onMonacoLoad() {
+  (window as any).monaco.languages.typescript.typescriptDefaults.setDiagnosticsOptions({
+    noSemanticValidation: true,
+    noSyntaxValidation: true,
+  });
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +80,7 @@ import {TestingAppComponent} from "./preview-app/testing-app/testing-app.compone
     RouterOutlet,
     AppRoutingModule,
     MatImportsModule,
-    MonacoEditorModule.forRoot(),
+    MonacoEditorModule.forRoot(monacoConfig),
     IgxCarouselModule,
     IgxListModule,
     IgxInputGroupModule,
