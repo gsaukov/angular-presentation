@@ -36,6 +36,7 @@ import {DataSharingAppComponent} from "./preview-app/data-sharing-app/data-shari
 import {TestingAppComponent} from "./preview-app/testing-app/testing-app.component";
 import {ConclusionAppComponent} from "./preview-app/conclusion-app/conclusion-app.component";
 import {MutationObserverService} from "./services/mutation-observer.service";
+import {NavigationBlockedComponent} from "./navigation/navigation-blocked/navigation-blocked.component";
 
 
 const monacoConfig: NgxMonacoEditorConfig = {
@@ -56,6 +57,7 @@ function onMonacoLoad() {
     AppComponent,
     SiteLayoutComponent,
     PageNotFoundComponent,
+    NavigationBlockedComponent,
     CounterDirective,
     HeaderComponent,
     SidenavListComponent,

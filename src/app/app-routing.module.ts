@@ -9,24 +9,28 @@ import {DependenciesAppComponent} from "./preview-app/dependencies-app/dependenc
 import {DataSharingAppComponent} from "./preview-app/data-sharing-app/data-sharing-app.component";
 import {TestingAppComponent} from "./preview-app/testing-app/testing-app.component";
 import {ConclusionAppComponent} from "./preview-app/conclusion-app/conclusion-app.component";
+import {AuthGuardService} from "./services/auth-guard.service";
+import {NavigationBlockedComponent} from "./navigation/navigation-blocked/navigation-blocked.component";
 
 // ROUTES
 const routes: Routes = [
   {path: '', component: SiteLayoutComponent, children: [
-    { path: '', redirectTo: '/introduction', pathMatch: 'full' },
-    { path: 'introduction', component: IntroductionComponent},
-    { path: 'history', component: HistoryAppComponent},
-    { path: 'framework', component: FrameworkAppComponent},
-    { path: 'dependencies', component: DependenciesAppComponent},
-    { path: 'data-sharing', component: DataSharingAppComponent},
-    { path: 'testing', component: TestingAppComponent},
-    { path: 'conclusion', component: ConclusionAppComponent},
+    { path: '', redirectTo: '/introduction', pathMatch: 'full'},
+    { path: 'introduction', component: IntroductionComponent, canActivate: [AuthGuardService]},
+    { path: 'history', component: HistoryAppComponent, canActivate: [AuthGuardService]},
+    { path: 'framework', component: FrameworkAppComponent, canActivate: [AuthGuardService]},
+    { path: 'dependencies', component: DependenciesAppComponent, canActivate: [AuthGuardService]},
+    { path: 'data-sharing', component: DataSharingAppComponent, canActivate: [AuthGuardService]},
+    { path: 'testing', component: TestingAppComponent, canActivate: [AuthGuardService]},
+    { path: 'conclusion', component: ConclusionAppComponent, canActivate: [AuthGuardService]},
   ]},
+  {path: 'blocked', component: NavigationBlockedComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuardService]
 })
 export class AppRoutingModule { }

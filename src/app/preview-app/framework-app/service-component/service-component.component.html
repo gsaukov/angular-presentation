@@ -6,7 +6,7 @@
         <span> Service is a service like anywhere else! </span>
         <br/>
         <span>Services play a crucial role in providing a way to encapsulate and share logic, data, and functionality across different parts of your application. Try to keep them async!</span>
-        <br/><br/>
+        <div style="height: 0.5em;"> </div>
         <div class="place-query-container">
           <form class="place-query-form" [formGroup]="form" (ngSubmit)="onSubmit()" ngNativeValidate>
             <div class="form-element" >
@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="grid-item item2">
-        <app-editor [code]="code"></app-editor>
+        <app-editor [code]="code" language="typescript"></app-editor>
       </div>
     </div>
   </mat-card-content>
