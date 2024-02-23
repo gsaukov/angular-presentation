@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {MutationObserverService} from "../../services/mutation-observer.service";
+import { Component } from '@angular/core'
+import {MutationObserverService} from "../../services/mutation-observer.service"
 
 @Component({
   selector: 'app-conclusion-app',

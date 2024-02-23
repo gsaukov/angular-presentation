@@ -1,6 +1,6 @@
-import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
-import {MonacoEditorModule} from "ngx-monaco-editor-v2";
-import {FormsModule} from "@angular/forms";
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core'
+import {MonacoEditorModule} from "ngx-monaco-editor-v2"
+import {FormsModule} from "@angular/forms"
 
 @Component({
   selector: 'app-editor',
@@ -10,7 +10,7 @@ import {FormsModule} from "@angular/forms";
   styleUrl: './editor.component.scss'
 })
 export class EditorComponent implements OnInit {
-  @ViewChild('editorComponent', {static: true}) editorComponent!: ElementRef;
+  @ViewChild('editorComponent', {static: true}) editorComponent!: ElementRef
   @Input({required: true}) code!: string
   @Input({required: false}) language!: string
   editorOptions = {}

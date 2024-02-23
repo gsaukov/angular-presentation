@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core'
 import { html_beautify } from 'js-beautify'
 
 @Component({
@@ -15,7 +15,7 @@ export class IntroductionComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.code = html_beautify(document.documentElement.innerHTML)
-    });
+    })
   }
 
 }

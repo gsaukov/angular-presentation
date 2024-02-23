@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import {CanActivate, Router, RouterStateSnapshot, ActivatedRouteSnapshot} from '@angular/router';
+import { Injectable } from '@angular/core'
+import {CanActivate, Router, RouterStateSnapshot, ActivatedRouteSnapshot} from '@angular/router'
 
-export const DEMO_DATE = new Date(Date.parse("2024-02-27T15:30:00+0100"));
+export const DEMO_DATE = new Date(Date.parse("2024-02-27T15:30:00+0100"))
 
 export function isDemoTime(): boolean {
   return (new Date().getTime() - new Date(DEMO_DATE).getTime()) > 0
@@ -14,10 +14,10 @@ export class AuthGuardService implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     if (isDemoTime()) {
-      return true;
+      return true
     } else {
-      this.router.navigate(['/blocked']);
-      return false;
+      this.router.navigate(['/blocked'])
+      return false
     }
   }
 

@@ -1,5 +1,5 @@
-import {Component, Input, } from '@angular/core';
-import {NominatimResult} from "../../../../services/nominatim.service";
+import {Component, Input, } from '@angular/core'
+import {NominatimResult} from "../../../../services/nominatim.service"
 
 
 @Component({
@@ -15,10 +15,10 @@ export class PlaceQueryResultsComponent {
 
   @Input()
   set dataSource(dataSource: NominatimResult[]) {
-    this._dataSource = dataSource;
+    this._dataSource = dataSource
   }
 
   get dataSource(): any {
-    return this._dataSource;
+    return this._dataSource
   }
 }

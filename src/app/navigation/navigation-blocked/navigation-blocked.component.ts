@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
-import {DEMO_DATE, isDemoTime} from "../../services/auth-guard.service";
-import {Router} from "@angular/router";
+import {Component} from '@angular/core'
+import {DEMO_DATE, isDemoTime} from "../../services/auth-guard.service"
+import {Router} from "@angular/router"
 
 const SECOND = 1000
 const MINUTE = SECOND * 60
@@ -13,23 +13,23 @@ const DAY = HOUR * 24
   styleUrl: './navigation-blocked.component.scss'
 })
 export class NavigationBlockedComponent {
-  days!: number;
-  hours!: number;
-  minutes!: number;
-  seconds!: number;
+  days!: number
+  hours!: number
+  minutes!: number
+  seconds!: number
 
   constructor(private router: Router) {
   }
 
   ngOnInit(): void {
     if (!isDemoTime()) {
-      this.updateCountdown();
+      this.updateCountdown()
       const interval = setInterval(() => {
         if (isDemoTime()) {
           this.navigateToIntro(interval)
         }
-        this.updateCountdown();
-      }, 1000);
+        this.updateCountdown()
+      }, 1000)
     } else {
       this.navigateToIntro()
     }
@@ -39,10 +39,10 @@ export class NavigationBlockedComponent {
     const demoDate = new Date(DEMO_DATE)
     const currentTime = new Date()
     const diff = demoDate.getTime() - currentTime.getTime()
-    this.days = this.getDays(diff);
-    this.hours = this.getHours(diff);
-    this.minutes = this.getMinutes(diff);
-    this.seconds = this.getSeconds(diff);
+    this.days = this.getDays(diff)
+    this.hours = this.getHours(diff)
+    this.minutes = this.getMinutes(diff)
+    this.seconds = this.getSeconds(diff)
   }
 
   navigateToIntro(interval?: any) {
@@ -53,18 +53,18 @@ export class NavigationBlockedComponent {
   }
 
   getDays(t: number) {
-    return Math.floor(t / DAY);
+    return Math.floor(t / DAY)
   }
 
   getHours(t: number) {
-    return Math.floor((t / HOUR) % 24);
+    return Math.floor((t / HOUR) % 24)
   }
 
   getMinutes(t: number) {
-    return Math.floor((t / MINUTE) % 60);
+    return Math.floor((t / MINUTE) % 60)
   }
 
   getSeconds(t: number) {
-    return Math.floor((t / SECOND) % 60);
+    return Math.floor((t / SECOND) % 60)
   }
 }

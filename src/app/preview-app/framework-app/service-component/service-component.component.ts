@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
-import {NominatimResult, NominatimService} from "../../../services/nominatim.service";
+import { Component } from '@angular/core'
+import {FormControl, FormGroup} from "@angular/forms"
+import {NominatimResult, NominatimService} from "../../../services/nominatim.service"
 
 @Component({
   selector: 'app-service-component',

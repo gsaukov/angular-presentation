@@ -1,4 +1,4 @@
-import {Injectable} from "@angular/core";
+import {Injectable} from "@angular/core"
 
 @Injectable({
   providedIn: 'root'
@@ -21,16 +21,16 @@ export class MutationObserverService {
               this.volume = this.volume + JSON.stringify(n).length
             })
           }
-        });
+        })
       }
-    );
+    )
 
     this.observer.observe(element, {
       attributes: true,
       childList: true,
       characterData: true,
       subtree: true
-    });
+    })
 
   }
 

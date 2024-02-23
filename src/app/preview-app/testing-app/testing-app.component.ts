@@ -1,5 +1,5 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
-import {EditorComponent} from "ngx-monaco-editor-v2";
+import {Component, ViewChild} from '@angular/core'
+import {EditorComponent} from "ngx-monaco-editor-v2"
 
 @Component({
   selector: 'app-testing-app',
@@ -7,7 +7,7 @@ import {EditorComponent} from "ngx-monaco-editor-v2";
   styleUrl: './testing-app.component.scss'
 })
 export class TestingAppComponent {
-  @ViewChild('editor', { static: true }) editor!: EditorComponent;
+  @ViewChild('editor', { static: true }) editor!: EditorComponent
   code=
     'describe(\'TestingAppComponent\', () => {\n' +
     '  let component: TestingAppComponent;\n' +

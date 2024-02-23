@@ -1,11 +1,4 @@
-import { Component } from '@angular/core';
-import {
-  CarouselComponent, CarouselControlComponent,
-  CarouselIndicatorsComponent,
-  CarouselInnerComponent,
-  CarouselItemComponent
-} from "@coreui/angular";
-import {AppModule} from "../../app.module";
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-framework-app',
@@ -16,8 +9,5 @@ export class FrameworkAppComponent {
 
   constructor() { }
 
-  ngOnInit(): void {
-
-  }
 
 }

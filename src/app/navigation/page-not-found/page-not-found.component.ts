@@ -1,5 +1,5 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import {AfterViewInit, Component, OnInit} from '@angular/core'
+import {Router} from '@angular/router'
 
 @Component({
     selector: 'app-page-not-found',
@@ -8,8 +8,8 @@ import {Router} from '@angular/router';
 })
 export class PageNotFoundComponent implements OnInit, AfterViewInit {
 
-    counter: number = 1000;
-    interval: number = 10;
+    counter: number = 1000
+    interval: number = 10
 
     constructor(private router: Router) {
     }
@@ -22,8 +22,8 @@ export class PageNotFoundComponent implements OnInit, AfterViewInit {
 
     tryRedirect(): boolean {
         if (this.counter === 0) {
-            this.router.navigate(['/']);
+            this.router.navigate(['/'])
         }
-        return true;
+        return true
     }
 }
