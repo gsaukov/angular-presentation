@@ -1,1 +1,31 @@
-<ngx-monaco-editor #editorComponent class="code-editor"  [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+<ng-container *ngIf="loading;">
+  <div class="loader">
+    <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+      <style>.spinner_GmWz {
+        fill: aqua;
+        animation: spinner_Ctle .8s linear infinite;
+        animation-delay: -.8s
+      }
+
+      .spinner_NuDr {
+        animation-delay: -.65s
+      }
+
+      .spinner_OlQ0 {
+        animation-delay: -.5s
+      }
+
+      @keyframes spinner_Ctle {
+        93.75%, 100% {
+          opacity: .2
+        }
+      }</style>
+      <rect class="spinner_GmWz" x="4" y="16" width="24" height="64"/>
+      <rect class="spinner_GmWz spinner_NuDr" x="36" y="16" width="24" height="64"/>
+      <rect class="spinner_GmWz spinner_OlQ0" x="68" y="16" width="24" height="64"/>
+    </svg>
+  </div>
+</ng-container>
+
+<ngx-monaco-editor #editorComponent class="code-editor" [options]="editorOptions"
+                   [(ngModel)]="code" (onInit)="onMonacoInit($event)"></ngx-monaco-editor>
