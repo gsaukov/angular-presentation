@@ -24,7 +24,8 @@ export class ServiceComponentComponent {
   }
 
 
-  code = '//NOMINATIM SERVICE \n' +
+  code = 'const API_URL = \'https://nominatim.openstreetmap.org\' \n' +
+    '//NOMINATIM SERVICE \n' +
     'export interface NominatimResult {\n' +
     '  addresstype: string;\n' +
     '  boundingbox: number []\n' +
